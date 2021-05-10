@@ -1,0 +1,253 @@
+body {
+    background: #0f1923;
+    font-family: "Muli";
+}
+
+.playButton {
+    display: flex;
+    /* height: 100vh; */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    /* overflow-wrap: normal; */
+    /* clear: both; */
+    /* display: block; */
+    /* flex-flow: column;    */
+    /* display: flex; */
+}
+.playButton a {
+    width: 54px;
+    min-width: 54px;
+    max-width: 240px;
+    height: 54px;
+    padding: 8px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: #ff4655;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 0 0 1px inset rgba(236, 232, 225, 0.3);
+    position: relative;
+    margin: 10px 0;
+}
+.playButton a.white:hover > p {
+    color: #ece8e1;
+}
+.playButton a.white > p {
+    background: #ece8e1;
+    color: #0f1923;
+}
+.playButton a.white > p span.base {
+    border: 1px solid transparent;
+}
+.playButton a.transparent:hover > p {
+    color: #ece8e1;
+}
+.playButton a.transparent:hover > p span.text {
+    box-shadow: 0 0 0 1px #ece8e1;
+}
+.playButton a.transparent > p {
+    background: #0f1923;
+    color: #ece8e1;
+}
+.playButton a.transparent > p span.base {
+    border: 1px solid #ece8e1;
+}
+.playButton a:after,
+.playButton a:before {
+    content: "";
+    width: 1px;
+    position: absolute;
+    height: 8px;
+    background: #0f1923;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.playButton a:before {
+    right: 0;
+    left: initial;
+}
+.playButton a p {
+    margin: 0;
+    height: 54px;
+    line-height: 54px;
+    box-sizing: border-box;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.playButton a p span.base {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border: 1px solid #ff4655;
+}
+.playButton a p span.base:before {
+    content: "";
+    width: 2px;
+    height: 2px;
+    left: -1px;
+    top: -1px;
+    background: #0f1923;
+    position: absolute;
+    transition: 0.3s ease-out all;
+}
+.playButton a p span.bg {
+    left: -5%;
+    position: absolute;
+    background: #ff4655;
+    width: 0;
+    height: 100%;
+    z-index: 3;
+    transition: 0.3s ease-out all;
+    transform: skewX(-10deg);
+}
+.playButton a p span.text {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.playButton a p span.text:after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    right: 0;
+    bottom: 0;
+    background: #0f1923;
+    position: absolute;
+    /* transition: 0.3s ease-out all; */
+    z-index: 5;
+}
+.playButton a:hover {
+    color: #ece8e1;
+}
+.playButton a:hover span.bg {
+    width: 110%;
+}
+.playButton a:hover span.text:after {
+    background: #ece8e1;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Muli:400,800&display=swap");
+/*p {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 0.4rem;
+    font-family: "Muli";
+    text-transform: uppercase;
+}
+
+.skin2 button {
+    border: 3px solid #f5d300;
+    color: #f5d300;
+    background-color: #292300;
+}
+.skin2 button:hover {
+    border-color: #ffe129;
+    color: #ffe129;
+    background-color: #5c4f00;
+}
+.skin2 button:focus {
+    border-color: #ffe129;
+    color: #ffe129;
+    background-color: #5c4f00;
+    padding: 16px 16px;
+    outline: 0;
+    border-radius: 12px;
+}
+
+.skin3 button {
+    border: 3px solid #00d4ff;
+    color: #00d4ff;
+    background-color: #002a33;
+}
+.skin3 button:hover {
+    border-color: #33ddff;
+    color: #33ddff;
+    background-color: #005566;
+}
+.skin3 button:focus {
+    border-color: #33ddff;
+    color: #33ddff;
+    background-color: #005566;
+    padding: 16px 16px;
+    outline: 0;
+    border-radius: 12px;
+}
+
+.skin4 button {
+    border: 3px solid #72ff00;
+    color: #72ff00;
+    background-color: #173300;
+}
+.skin4 button:hover {
+    border-color: #8eff33;
+    color: #8eff33;
+    background-color: #2e6600;
+}
+.skin4 button:focus {
+    border-color: #8eff33;
+    color: #8eff33;
+    background-color: #2e6600;
+    padding: 16px 16px;
+    outline: 0;
+    border-radius: 12px;
+}
+
+* {
+    font-family: "Muli", sans-serif;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+button {
+    outline: 0;
+}
+
+.group-container {
+    height: 100px;
+    display: grid;
+    place-items: center;
+    justify-items: center;
+}
+
+.multi-button {
+    font-size: 0;
+    align-items: center;
+    align-content: center;
+}
+
+button {
+    font-weight: 800;
+    background: transparent;
+    min-width: 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 15px;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 0 3px 0 0;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+@media only screen and (max-width: 767px) {
+    button {
+        min-width: 20px;
+    }
+} */

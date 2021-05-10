@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.PlayScreen {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.PlayButtonScreen {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+.EndScreen {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.ErrorMessage {
+    color: red;
+    text-align: center;
+}
+
+.movieTitle {
+    letter-spacing: 6px;
+    font-size: 300%;
+    color: white;
+    font-family: "Muli";
+}
+
+.lives {
+    color: white;
+    font-size: 5vw;
+    color: white;
+    font-family: "Muli";
+}
+
+.score {
+    font-size: 150%;
+    color: white;
+    font-family: "Muli";
+}
+.hintText {
+    font-size: 200%;
+    color: white;
+    font-family: "Muli";
+}
+.hintButton {
+    font-family: "Muli";
+    background-color: #0f1923;
+    color: white;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    font-size: 55%;
+    transition: 0.3s;
+}
+.hintButton:hover {
+    font-family: "Muli";
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+}
+
+.endScreenText {
+    font-size: 5vw;
+    color: white;
+    font-family: "Muli";
+}
+.openingTitle {
+    font-size: 13vw;
+    color: white;
+    font-family: "Lobster", "cursive";
+    text-align: center;
+}
+
+.timer {
+    color: white;
+}
+.strikeThroughTitle {
+    font-size: 13vw;
+    color: red;
+    font-family: "Lobster", "cursive";
+    text-align: center;
+    /* margin: 30px; */
+    text-decoration: line-through;
+}
+
+.endScreenMovieName {
+    font-size: 8vw;
+    color: white;
+    font-family: "Lobster", "cursive";
+    text-align: center;
+}
+
+.nextMovieButton {
+    font-family: "Muli";
+    background-color: #0f1923;
+    color: white;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    font-size: 200%;
+    transition: 0.3s;
+}
+.nextMovieButton:hover {
+    font-family: "Muli";
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+}
+
+@media screen and (min-width: 743px) {
+    .openingTitle {
+        font-size: 100px;
+    }
+    .strikeThroughTitle {
+        font-size: 100px;
+    }
+    .lives {
+        font-size: 37px;
+    }
+    .endScreenText {
+        font-size: 37px;
+    }
+    .endScreenMovieName {
+        font-size: 59px;
+    }
+}
