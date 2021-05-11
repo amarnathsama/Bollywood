@@ -250,17 +250,12 @@ class App extends Component {
         this.setState({
             showLeaderboard: !this.state.showLeaderboard,
         });
-        await fetch("https://bollywoodbackend.herokuapp.com/api/leaderboard/")
+        await fetch(`${inUseUrl}/api/leaderboard/`)
             .then((res) => {
                 return res.json();
             })
             .then((usersData) => {
                 let rows = [];
-                if (rows.length == usersData.length) {
-                    return;
-                } else {
-                    rows = [];
-                }
                 usersData.sort(function (a, b) {
                     if (a.score > b.score) return -1;
                     if (a.score < b.score) return 1;
